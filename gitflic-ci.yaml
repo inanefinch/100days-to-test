@@ -9,7 +9,7 @@ variables:
     value: "test-value"
   NAMES:
     description: "Переменная с выбором значений"
-    value: "GitFlic"
+    value: "Andrey"
     options:
       - "GitFlic"
       - "GitHub"
