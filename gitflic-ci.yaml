@@ -1,0 +1,26 @@
+
+variables:
+  TEST_1_SUCCESS: "true"
+  TEST_2_SUCCESS: "true"
+  VAR1:
+    description: "Переменная без значения по умолчанию"
+  VAR2:
+    description: "Переменная со значением по умолчанию"
+    value: "test-value"
+  NAMES:
+    description: "Переменная с выбором значений"
+    value: "GitFlic"
+    options:
+      - "GitFlic"
+      - "GitHub"
+      - "GitLab"
+
+  
+before_script:
+  - echo "Скрипт до основных инструкций (в каждой задаче)"
+  stage: deploy
+  script:
+    - echo "local"
+  
+after_script:
+  - echo "Скрипт после основных инструкций (в каждой задаче)"
