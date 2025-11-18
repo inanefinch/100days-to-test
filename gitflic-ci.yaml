@@ -15,12 +15,15 @@ variables:
       - "GitHub"
       - "GitLab"
 
-  
-before_script:
-  - echo "Скрипт до основных инструкций (в каждой задаче)"
-  stage: deploy
+stages:
+  - test
+  - build
+  - deploy
+
+build:
+  stage: build
   script:
-    - echo "local"
-  
-after_script:
-  - echo "Скрипт после основных инструкций (в каждой задаче)"
+    - echo "Сборка проекта"
+    - echo "Собранный проект" > build.txt
+  artifacts:
+    paths: build.txt
